@@ -1,0 +1,135 @@
+/* Basic Styling */
+
+body {
+    background: linear-gradient(135deg, #2d3436, #1e272e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: #dfe6e9;
+    margin: 0;
+}
+
+.robot-app {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: center;
+}
+
+
+/* Robot Head Styling */
+
+.robot-head {
+    background: linear-gradient(145deg, #555, #333);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+/* Eye Container */
+
+.eye-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+
+/* Robotic Eye Styling */
+
+.eye {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #aaa 60%, #555);
+    border-radius: 50%;
+    border: 5px solid #888;
+    box-shadow: inset -3px -3px 8px rgba(0, 0, 0, 0.3), inset 3px 3px 8px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+@keyframes blink {
+    0%,
+    20%,
+    60%,
+    100% {
+        height: 80px;
+    }
+    /* Open eye */
+    30%,
+    50% {
+        height: 10px;
+    }
+    /* Closed eye */
+}
+
+.pupil {
+    width: 25px;
+    height: 25px;
+    background-color: #f37e15;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+    box-shadow: 0 0 8px rgba(0, 204, 255, 0.7), inset -3px -3px 8px rgba(0, 204, 255, 0.5);
+}
+
+
+/* Mouth */
+
+.robot-mouth {
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(to right, #333, #111);
+    margin: 20px auto 0;
+    border-radius: 10px 10px 40px 40px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Memo, Input, and Button Styling */
+
+.memo-text {
+    font-size: 2em;
+    color: hsla(29, 96%, 41%, 0.918);
+    background: #333;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.set-alarm-btn {
+    padding: 10px 20px;
+    background-color: #0abde3;
+    border: none;
+    color: #222;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.set-alarm-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 204, 255, 0.3);
+}
+
+.time-display {
+    font-size: 3em;
+    color: #0abde3;
+    margin: 10px 0;
+    font-weight: bold;
+}
